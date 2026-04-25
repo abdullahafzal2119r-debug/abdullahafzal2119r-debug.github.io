@@ -24,39 +24,46 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: auto;
+    position: relative;
 }
 
 /* =========================
    HERO SECTION
 ========================= */
 .hero {
+    position: relative;
     background: linear-gradient(to right, #0f172a, #1e3a8a);
     color: white;
-    text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
+    text-align: left;
 }
 
-/* Profile Image */
+/* Profile Image - Right Corner */
 .profile-img {
-    width: 190px;
-    height: 190px;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid white;
-    margin-bottom: 25px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* Hero Text */
 .hero h1 {
     font-size: 48px;
     margin-bottom: 15px;
     font-weight: bold;
+    padding-right: 220px;
 }
 
 .subtitle {
     font-size: 20px;
     margin-bottom: 30px;
     color: #dbeafe;
+    padding-right: 220px;
 }
 
 /* Resume Button */
@@ -209,17 +216,27 @@ footer {
    RESPONSIVE DESIGN
 ========================= */
 @media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .profile-img {
+        position: static;
+        display: block;
+        margin: 0 auto 25px auto;
+        width: 150px;
+        height: 150px;
+    }
+
     .hero h1 {
         font-size: 34px;
+        padding-right: 0;
     }
 
     .subtitle {
         font-size: 16px;
-    }
-
-    .profile-img {
-        width: 150px;
-        height: 150px;
+        padding-right: 0;
     }
 
     section h2 {
